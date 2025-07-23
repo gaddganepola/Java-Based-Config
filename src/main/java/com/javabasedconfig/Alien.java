@@ -1,5 +1,8 @@
 package com.javabasedconfig;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alien {
     private int age;
     private int salary;
