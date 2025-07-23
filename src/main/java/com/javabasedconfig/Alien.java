@@ -1,11 +1,15 @@
 package com.javabasedconfig;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
     private int age;
     private int salary;
+    @Autowired
+//    @Qualifier("lap")
     private Computer com;
 
     public int getAge() {
@@ -27,12 +31,20 @@ public class Alien {
         this.salary = salary;
     }
 
+//    @Autowired
+    public Alien(Computer com) {
+        this.com = com;
+        System.out.println("Constructor Injection");
+    }
+
     public Computer getCom() {
         return com;
     }
 
+//    @Autowired
     public void setCom(Computer com) {
         this.com = com;
+        System.out.println("Setter Injection");
     }
 
     public void code() {
