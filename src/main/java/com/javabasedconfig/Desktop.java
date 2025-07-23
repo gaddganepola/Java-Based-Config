@@ -3,7 +3,8 @@ package com.javabasedconfig;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
+@Primary
 public class Desktop implements Computer{
     @Override
     public void compile() {
